@@ -1,0 +1,60 @@
+@use 'helpers' as *;
+
+html {
+    &.is-lock {
+        overflow: hidden
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family-base);
+    font-size: rem(13);
+    line-height: 1.77;
+    color: var(--color-text);
+    background-color: var(--color-white);
+}
+
+h1, .h1 {
+    @include fluid-text(60, 30);
+
+    font-family: var(--font-family-accent);
+    line-height: normal;
+    letter-spacing: 0.1em;
+    text-align: center
+}
+
+h2, .h2 {
+    font-size: rem(18);
+    
+    letter-spacing: 0.13em;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+a {
+    color: inherit;
+
+    @include hover {
+        color: var(--color-blue);
+    }
+
+    &[class] {
+        text-decoration: none;
+    }
+}
+
+:focus-visible {
+    outline: rem(2) dashed var(--color-blue);
+    outline-offset: rem(4);
+    transition-duration: 0s !important;
+}

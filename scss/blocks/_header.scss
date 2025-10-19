@@ -1,6 +1,12 @@
 @use 'helpers' as *;
 
 .header {
+    margin-bottom: rem(60);
+
+    @include mobile {
+        margin-bottom: rem(30);
+    }
+
     &__inner {
         display: flex;
         flex-direction: column;
@@ -33,11 +39,6 @@
     &__subtitle {
         font-weight: 600;
         font-size: rem(16);
-    }
-
-    &__subtitle {
-        font-weight: 600;
-        font-size: rem(11);
     }
 
     &__text {

@@ -3,11 +3,9 @@
 .story {
     &:not(:last-child) {
         margin-bottom: rem(115);
-    }
 
-    &__header {
-        &:not(:last-child) {
-            margin-bottom: rem(55);
+        @include mobile {
+            margin-bottom: rem(50);
         }
     }
 

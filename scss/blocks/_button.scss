@@ -1,0 +1,19 @@
+@use 'helpers' as *;
+
+.button {
+    display: inline-flex;
+    padding: rem(10) rem(30);
+    color: var(--color-white);
+    background-color: var(--color-blue);
+
+    @include hover {
+        color: var(--color-white);
+        background-color: var(--color-text);
+    }
+
+    &--capability {
+        @include mobile {
+            align-self: start;
+        }
+    }
+}

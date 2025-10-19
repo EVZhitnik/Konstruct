@@ -26,9 +26,10 @@ h1, .h1 {
 }
 
 h2, .h2 {
+    font-weight: 700;
     font-size: rem(18);
-    
     letter-spacing: 0.13em;
+    text-transform: uppercase;
 }
 
 a,

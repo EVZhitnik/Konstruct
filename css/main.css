@@ -214,8 +214,10 @@ h1, .h1 {
 }
 
 h2, .h2 {
+  font-weight: 700;
   font-size: 1.125rem;
   letter-spacing: 0.13em;
+  text-transform: uppercase;
 }
 
 a,
@@ -251,6 +253,14 @@ a[class] {
   transition-duration: 0s !important;
 }
 
+.header {
+  margin-bottom: 3.75rem;
+}
+@media (width <= 47.99875rem) {
+  .header {
+    margin-bottom: 1.875rem;
+  }
+}
 .header__inner {
   display: flex;
   flex-direction: column;
@@ -281,10 +291,6 @@ a[class] {
 .header__subtitle {
   font-weight: 600;
   font-size: 1rem;
-}
-.header__subtitle {
-  font-weight: 600;
-  font-size: 0.6875rem;
 }
 .header__text {
   font-weight: 600;

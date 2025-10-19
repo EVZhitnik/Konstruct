@@ -506,6 +506,14 @@ a[class] {
     margin-bottom: 3.125rem;
   }
 }
+.story__header:not(:last-child) {
+  margin-bottom: 3.75rem;
+}
+@media (width <= 47.99875rem) {
+  .story__header:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+}
 .story__title {
   position: relative;
   text-align: center;
@@ -684,8 +692,11 @@ a[class] {
 
 .button {
   display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   color: var(--color-white);
   background-color: var(--color-blue);
+  text-transform: uppercase;
 }
 @media (any-hover: hover) {
   .button:hover {

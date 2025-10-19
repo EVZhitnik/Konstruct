@@ -9,6 +9,16 @@
         }
     }
 
+    &__header {
+        &:not(:last-child) {
+            margin-bottom: rem(60);
+
+            @include mobile {
+                margin-bottom: rem(20);
+            }
+        }
+    }
+
     &__title {
         position: relative;
         text-align: center;

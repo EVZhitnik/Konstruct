@@ -498,4 +498,100 @@ a[class] {
   }
 }
 
+.story:not(:last-child) {
+  margin-bottom: 7.1875rem;
+}
+.story__header:not(:last-child) {
+  margin-bottom: 3.4375rem;
+}
+.story__title {
+  position: relative;
+  text-align: center;
+  height: 2.5rem;
+}
+.story__title::before {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  bottom: 0;
+  width: 3.125rem;
+  height: 0.125rem;
+  background-color: var(--color-blue);
+}
+.story__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.875rem;
+}
+@media (width <= 63.99875rem) {
+  .story__body {
+    flex-direction: column-reverse;
+  }
+}
+.story__content {
+  display: grid;
+  row-gap: 1.875rem;
+  max-width: 25.3125rem;
+}
+@media (width <= 63.99875rem) {
+  .story__content {
+    max-width: 100%;
+    row-gap: 1.25rem;
+  }
+}
+.story__text {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.01em;
+  line-height: normal;
+}
+@media (width <= 47.99875rem) {
+  .story__text {
+    font-size: 1rem;
+  }
+}
+.story__text span {
+  color: var(--color-blue);
+}
+.story__images-list {
+  display: flex;
+  gap: 1.25rem;
+}
+@media (width <= 30.06125rem) {
+  .story__images-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.story__images-item {
+  position: relative;
+}
+.story__images-item::before {
+  position: absolute;
+  font-family: var(--font-family-base);
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.21;
+  letter-spacing: 0.01em;
+  color: var(--color-white);
+  text-transform: uppercase;
+  padding: 0.9375rem;
+}
+@media (width <= 63.99875rem) {
+  .story__images-item::before {
+    font-size: 1.125rem;
+  }
+}
+.story__images-item:nth-child(1)::before {
+  content: "We plan";
+}
+.story__images-item:nth-child(2)::before {
+  content: "We manage";
+}
+.story__images-item:nth-child(3)::before {
+  content: "We build";
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,110 @@
+@use 'helpers' as *;
+
+.story {
+    &:not(:last-child) {
+        margin-bottom: rem(115);
+    }
+
+    &__header {
+        &:not(:last-child) {
+            margin-bottom: rem(55);
+        }
+    }
+
+    &__title {
+        position: relative;
+        text-align: center;
+        height: rem(40);
+
+        &::before {
+            @include abs-position(horizontal);
+
+            content: '';
+            bottom: 0;
+            width: rem(50);
+            height: rem(2);
+            background-color: var(--color-blue);
+        }
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: rem(30);
+
+        @include tablet {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__content {
+        display: grid;
+        row-gap: rem(30);
+        max-width: rem(405);
+
+        @include tablet {
+            max-width: 100%;
+            row-gap: rem(20);
+        }
+    }
+
+    &__text {
+        font-weight: 700;
+        font-size: rem(20);
+        letter-spacing: 0.01em;
+        line-height: normal;
+
+        @include mobile {
+            font-size: rem(16);
+        }
+
+        span {
+            color: var(--color-blue);
+        }
+    }
+
+    &__images {
+        &-list {
+            display: flex;
+            gap: rem(20);
+
+            @include mobile-s {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        &-item {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                font-family: var(--font-family-base);
+                font-weight: 800;
+                font-size: rem(24);
+                line-height: 1.21;
+                letter-spacing: 0.01em;
+                color: var(--color-white);
+                text-transform: uppercase;
+                padding: rem(15);
+
+                @include tablet {
+                    font-size: rem(18);
+                }
+            }
+
+            &:nth-child(1)::before {
+                content: 'We plan';
+            }
+
+            &:nth-child(2)::before {
+                content: 'We manage';
+            }
+
+            &:nth-child(3)::before {
+                content: 'We build';
+            }
+        }
+    }
+}

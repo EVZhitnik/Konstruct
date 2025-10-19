@@ -2,8 +2,11 @@
 
 .button {
     display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.04em;
     color: var(--color-white);
     background-color: var(--color-blue);
+    text-transform: uppercase;
 
     @include hover {
         color: var(--color-white);
@@ -21,5 +24,14 @@
     &--build {
         padding: rem(10) rem(25);
         justify-self: center;
+    }
+
+    &--form {
+        border: none;
+        padding: rem(10) rem(50);
+
+        @include mobile {
+            padding-inline: rem(25);
+        }
     }
 }

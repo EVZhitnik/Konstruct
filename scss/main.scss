@@ -10,6 +10,9 @@
 
 @use 'blocks/story';
 
+@use 'blocks/capability';
+@use 'blocks/button';
+
 // .header,
 // main > *:not(:last-child),
 // .footer {

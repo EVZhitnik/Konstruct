@@ -15,8 +15,6 @@
 
 @use 'blocks/build';
 
-// .header,
-// main > *:not(:last-child),
-// .footer {
-//     display: none !important;
-// }
+@use 'blocks/footer';
+@use 'blocks/field';
+@use 'blocks/soc1als';

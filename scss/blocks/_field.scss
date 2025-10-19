@@ -1,0 +1,16 @@
+@use 'helpers' as *;
+
+.field {
+    &__input {
+        width: rem(250);
+        font-size: rem(14);
+        letter-spacing: 0.01em;
+        background-color: var(--color-white);
+        border: none;
+        padding: rem(10) rem(16);
+
+        @include mobile-s {
+            width: 100%;
+        }
+    }
+}

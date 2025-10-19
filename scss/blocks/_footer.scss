@@ -1,0 +1,127 @@
+@use 'helpers' as *;
+
+.footer {
+    &__subscribe {
+        @include flexbox(true, center, center);
+
+        background-color: var(--color-dark);
+        padding-block: rem(30);
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: rem(10);
+        }
+    }
+
+    &__text {
+        font-weight: 700;
+        font-size: rem(22);
+        letter-spacing: 0.04em;
+        color: var(--color-white);
+        margin-right: rem(85);
+
+        @include mobile {
+            margin: 0;
+        }
+    }
+
+    &__form {
+        display: flex;
+    }
+
+    &__main {
+        background-color: var(--color-dark-alternate);
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        column-gap: rem(20);
+        color: var(--color-white);
+        padding-block: rem(40);
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: rem(30);
+            padding-block: rem(20);
+        }
+    }
+
+    &__heading {
+        display: block;
+        font-size: rem(11);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__description {
+        max-width: rem(260);
+
+        @include mobile {
+            max-width: 100%;
+        }
+    }
+
+    &__logo {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-bottom: rem(15);
+        }
+    }
+
+    &__menu {
+        display: flex;
+        column-gap: rem(30);
+
+        &-column {
+            @include mobile {
+                width: 100%;
+            }
+        }
+
+        &-list {
+            display: grid;
+            row-gap: rem(10);
+        }
+
+        &-link {
+            text-transform: uppercase;
+        }
+    }
+
+    &__contacts {
+        display: grid;
+    }
+
+    &__address {
+        max-width: rem(120);
+
+        @include mobile {
+            max-width: 100%;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: rem(15);
+        }
+    }
+
+    &__phone {
+        &:not(:last-child) {
+            margin-bottom: rem(15);
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+        font-size: rem(11);
+        letter-spacing: 0.08em;
+        color: var(--color-white);
+        background-color: var(--color-dark);
+        padding: rem(22) rem(16);
+    }
+}

@@ -25,4 +25,13 @@
         padding: rem(10) rem(25);
         justify-self: center;
     }
+
+    &--form {
+        border: none;
+        padding: rem(10) rem(50);
+
+        @include mobile {
+            padding-inline: rem(25);
+        }
+    }
 }
